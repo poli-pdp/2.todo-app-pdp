@@ -1,6 +1,6 @@
 import TodoItem from './TodoItem';
 
-const TodoList = ({ todos, setTodos }) => {
+const TodoList = ({ todos, setTodos, setEdit }) => {
 	const deleteTodo = ({ id }) => {
 		setTodos(todos.filter(todo => todo.id !== id));
 	};
@@ -20,6 +20,7 @@ const TodoList = ({ todos, setTodos }) => {
 					todo={todo}
 					deleteTodo={deleteTodo}
 					completedTodo={completedTodo}
+					setEdit={setEdit}
 				/>
 			))}
 		</div>
